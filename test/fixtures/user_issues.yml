@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  issueId: 
+  userId: 
+  created: 
+  upvoted: 
+  downvoted: 
+
+two:
+  issueId: 
+  userId: 
+  created: 
+  upvoted: 
+  downvoted: 

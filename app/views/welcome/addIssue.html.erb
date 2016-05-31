@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <title>Add Issue</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        .validError{
+            color: red;
+        }
+        input[type=checkbox] + label{font-weight: 300;}
+        body{
+            margin-top: 40px !important;
+        }
+        .app-modal-window .modal-dialog {
+            width: 90%;
+        }
+        .pagination{
+            margin: 5px 0;
+        }
+        .margin-v-sm{
+            margin: 10px 0;
+        }
+        .margin-h-sm{
+            margin:0 10px;
+        }
+        a:hover {
+            cursor:pointer;
+        }
+        .padding-none{
+            padding:0;
+        }
+
+
+        .level0{
+            text-indent : 0px;
+            color : #428bca;
+        }
+        .level1{
+            text-indent : 20px;
+            color : #428bca;
+        }
+        .level2{
+            text-indent : 40px;
+            color : #428bca;
+        }
+        .level3{
+            text-indent : 60px;
+            color : #428bca;
+        }
+        .level4{
+            text-indent : 80px;
+            color : #428bca;
+        }
+        .level5{
+            text-indent : 100px;
+            color : #428bca;
+        }
+        .level6{
+            text-indent : 120px;
+            color : #428bca;
+        }
+        .hasDropdown{
+            color : #428bca ;
+        }
+        .noDropdown{
+            color : #000000;
+        }
+
+        div.tooltip-inner {
+            text-align: center;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            margin-bottom: 6px;
+            background-color: #505050;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body  style="background-color:#9c9f84;">
+    <form action="/welcome" method="POST" name="addIssue" id="addIssueForm">
+        <div class="row">
+            <div class="col-md-offset-4" style="background-color:#9c9f84;"><br><br>
+            <div class="panel panel-primary col-md-8" style="background-color:#D1FFD1;">
+                <br><div class="row">
+                    <div class="col-md-offset-5">
+                        <h4>Add Issue</h4></div><br><br>    
+                    </div>    
+                <a><div class="row">
+                    <div class="col-md-3 col-md-offset-2"> Topic : </div> 
+                        <input type="text" name="issueTopic" >
+                    </div></a>
+                <br>
+                <a><div class="row">
+                    <div class="col-md-3 col-md-offset-2"> Description : </div> 
+                        <input type="text" name="issueDesc" >
+                </div></a>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">  </div> 
+                        <button type="submit">Add</button>
+                </div>
+                <br>
+            </div>
+        </div>                  
+    </form>
+</body>
+</html>

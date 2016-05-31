@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>HelpApp</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body  style="background-color:#9c9f84;">
+    <br><br><br><br><br><br><br>
+    <form action="/login" method="POST" name="login" id="theform">
+        <div class="row">
+            <div class="col-md-offset-4" style="background-color:#9c9f84;"><br><br>
+            <div class="panel panel-primary col-md-8" style="background-color:#D1FFD1;">
+                <br><div class="row">
+                    <div class="col-md-offset-5">
+                        <h4>Login</h4></div><br><br>    
+                    </div>
+                    <% if @successFlag==1 %>
+                        <span class="label label-success">Login Successfully</span>
+                        <% elsif  @successFlag==2 %>
+                            <span class="label label-danger">User Login Fail</span>
+                    <% end %>    
+                <a><div class="row">
+                    <div class="col-md-3 col-md-offset-2"> User Mail : </div> 
+                        <input type="text" name="userMail" >
+                    </div></a>
+                <br>
+                <a><div class="row">
+                    <div class="col-md-3 col-md-offset-2"> Password : </div> 
+                        <input type="text" name="userPass" >
+                </div></a>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-6">  </div> 
+                        <button type="submit">Login</button>
+                </div>
+                <br>
+            </div>
+        </div>                  
+    </form>
+</body>
+</html>
