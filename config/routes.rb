@@ -3,7 +3,7 @@ HelpApp::Application.routes.draw do
   resources :login
   resources :welcome
   post "welcome/:id/upvote" , to: "welcome#upvote"
-  post "welcome/:id/downvote" , to: "welcome#downvote"
+  post "welcome/:id/down" , to: "welcome#downvote"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
