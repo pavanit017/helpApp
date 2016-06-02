@@ -5,34 +5,25 @@ class LoginController < ApplicationController
   end 
 
   def create
-  	 userMail = params[:userMail]
-  	 userPass = params[:userPass]
-  	 u = User.where(email: userMail)
+  	loginObj={}
+  	 loginObj["userMail"] = params[:userMail]
+  	 loginObj["userPass"] = params[:userPass]
+  	 
   	 #binding.pry
   	 @returnObj={}
-  	 @successFlag=0;
-	 
-	 if u[0].password==userPass
-	 	#@returnObj["success"] = true
-	 	#@returnObj["message"] = "login successfull"
-	 	#render "<p> Login successfull</p>"
-	 	#render "login/loginSuccess"
-	 	@successFlag=1
-	 	redirect_to '/welcome'
-	 else
-	 	#@returnObj["success"] = false
-	 	#@returnObj["message"] = "something went wrong"
-	 	@successFlag=2
-	 	# binding.pry
-	 	flash[:error] = "Your book was not found"
-	 	redirect_to '/login'
-	 	
-	 	#render "<p> something went wrong</p>"
+  	 #@successFlag=0;
 
-	 end  
+	 isUserLogin = view_context.isUserLogin(loginObj)
+		#binding.pry
+		if isUserLogin["success"]==true
+			session[:user_id] = isUserLogin["data"]
+     # binding.pry
+			redirect_to '/welcome'
+		else 
+			redirect_to '/login'
+		end
 
-  	 u = User.new(:name => "pavan", :email => "pavan.k@nestaway.com" , :password => "12345678");
-  	 u.save
+	  
   	 #binding.pry
   end
 

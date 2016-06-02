@@ -1,10 +1,15 @@
 HelpApp::Application.routes.draw do
+  get "helpapp/index"
+
   get "welcome/index"
   resources :login
   resources :welcome
   post "welcome/:id/upvote" , to: "welcome#upvote"
-  post "welcome/:id/down" , to: "welcome#downvote"
+  post "welcome/:id/downvote" , to: "welcome#downvote"
 
+  get "/signup" , to: "user#new"
+  post "/signup" , to: "user#create"
+  post "/logout" , to: "welcome#logout"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -54,7 +59,7 @@ HelpApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'login#index'
+   root :to => 'helpapp#index'
 
   # See how all your routes lay out with "rake routes"
 

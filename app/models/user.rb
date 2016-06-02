@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password
+
+  attr_accessible :email, :name, :password , :password_salt
   
 end

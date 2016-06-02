@@ -1,0 +1,38 @@
+<body style="background-color:#9c9f84;">
+    <form action="/signup" method="POST" name="signup" id="signUpForm">
+        <%= render :partial => "layouts/header" %>
+        <br><br><br><br><br>
+        <div class="row">
+            <div class="panel panel-primary col-md-6 col-md-offset-3" style="background-color:#D1FFD1;">
+            	<br><div class="row">
+                    <div class="col-md-offset-5">
+                        <h4>SignUp</h4></div><br><br>    
+                    </div>  
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-2">
+                    	<b> Name : </b>
+                    </div> 
+                    
+                        <input type="text" name="userName" >
+                    
+                 </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-2"><b> Email : </b></div> 
+                        <input type="text" name="userEmail" >
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-2"><b> password : </b></div> 
+                        <input type="text" name="userPassword" >
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">  </div> 
+                        <button type="submit" class="btn-success">SignUp</button>
+                </div>
+                <br>
+        </div>                  
+    </form>
+</body>
+

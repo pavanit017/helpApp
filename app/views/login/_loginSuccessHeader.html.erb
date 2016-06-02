@@ -1,0 +1,11 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">HelpApp</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= session[:user_id] %></li>
+      <li><a href="/logout" data-method="post"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
